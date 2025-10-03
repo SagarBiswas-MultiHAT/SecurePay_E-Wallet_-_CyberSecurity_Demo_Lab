@@ -1,0 +1,65 @@
+/* Minimal extra styling for admin cards */
+:root {
+    /* CSS Variables */
+    --color-text: #09090E;
+    --color-gradient: linear-gradient(135deg, #5ca0ff, #59fab7);
+    --color-box: linear-gradient(135deg, #ffc1c1, #feffcb);
+}
+
+body {
+    padding: 16px;
+    color: var(--color-text);
+    background: var(--color-gradient);
+}
+
+.admin-grid {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.admin-card {
+    /* Remove background here to allow .admin-card.total-users to override */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #eee;
+    padding: 24px;
+    min-width: 220px;
+    flex: 1;
+}
+
+.admin-card h2 {
+    margin: 0 0 0.5rem 0;
+    font-size: 19.2px;
+    color: #0077b6;
+}
+
+.admin-card .stat {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.admin-card.total-users {
+    background: var(--color-box) !important;
+    /* !important is used to override other styles */
+    color: #fff;
+}
+
+.recent-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.recent-table th,
+.recent-table td {
+    padding: 8px 16px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.recent-table th {
+    background: #aef1bf;
+    color: #0077b6;
+}

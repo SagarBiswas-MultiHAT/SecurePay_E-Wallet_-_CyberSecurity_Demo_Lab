@@ -1,0 +1,129 @@
+/* Importing Google Font -- Inter  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* * The universal selector (*) selects all HTML elements on the page. Example: The CSS rule below will affect every HTML element on the page. */
+* {
+    margin: 5px;
+    /* Margin - Clears an area outside the border. The margin is transparent */
+    padding: 5px;
+    /* Padding - Clears an area around the content. The padding is transparent */
+    box-sizing: border-box;
+    /* box-sizing: border-box ensures that the element's total width and height include its padding and border. This makes it easier to size elements 
+            accurately, as the specified width/height will not be increased by padding or borders. It helps create predictable layouts and prevents overflow issues. */
+    font-family: "Inter", sans-serif;
+    /* border: #007e33 solid 1px; */
+}
+
+:root {
+    /* CSS Variables */
+    --color-accent: #8B5CF6;
+    --color-card: hsl(198, 60%, 81%);
+    --color-input: #48e5c83b;
+    --color-text: #09090E;
+    --color-placeholder: #3540d3c0;
+    --color-border: #1265eca6;
+    --color-gradient: linear-gradient(135deg, #1475fe, #66ddac);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 16px;
+    color: var(--color-text);
+    background: var(--color-gradient);
+}
+
+.container {
+    width: 900px;
+    padding: 32px;
+    position: relative;
+    border-radius: 23px;
+    overflow: hidden;
+    background: var(--color-card);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+
+}
+
+h2 {
+    text-align: center;
+    color: #2d3a4b;
+    text-decoration: underline;
+    font-size: 30px;
+    font-weight: 710;
+}
+
+label {
+    display: block;
+    margin-top: 16px;
+    color: #2d3a4b;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 16px 20px;
+    margin-top: 6px;
+    border-radius: 15px;
+    font-size: 18px;
+    background: var(--color-input);
+    border: 1px solid var(--color-border);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: var(--color-placeholder);
+    font-size: 20px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 4px rgba(120, 100, 220, 0.19);
+}
+
+button {
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px;
+    background: #3a86ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    /* transition: background 0.2s; */
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(100, 40, 210, 0.3);
+}
+
+.alert.error {
+    padding: 12px;
+    margin: 16px 0;
+    border-radius: 4px;
+    font-size: 15px;
+    background: #ffe0e0;
+    color: #b00020;
+    border: 1px solid #ffb3b3;
+}
+
+a {
+    color: #3a86ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
